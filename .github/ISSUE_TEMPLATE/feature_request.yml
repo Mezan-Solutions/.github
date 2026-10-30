@@ -1,0 +1,56 @@
+name: Client change request / feature
+description: A new feature or a change requested by a client or the team
+title: "[CR] <module>: <short description>"
+labels: ["type: change-request", "status: triage"]
+body:
+  - type: input
+    id: client
+    attributes:
+      label: Client / project
+      placeholder: "e.g. client-<client> (or internal)"
+    validations:
+      required: true
+  - type: input
+    id: requested_by
+    attributes:
+      label: Requested by (name / role)
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Business need
+      description: What problem does this solve? Who uses it, and how often?
+    validations:
+      required: true
+  - type: textarea
+    id: standard
+    attributes:
+      label: Can standard Odoo do this?
+      description: Configuration, Studio or an existing OCA module checked first? What's missing?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] When ..., then ...
+        - [ ] Report shows ...
+    validations:
+      required: true
+  - type: dropdown
+    id: billing
+    attributes:
+      label: Scope / billing
+      options:
+        - In current contract scope
+        - Extra (needs a quote)
+        - Internal / not billed
+        - Not decided yet
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Wanted by (date)

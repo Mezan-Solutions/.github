@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Urgent production incident
+    url: mailto:support@TODO-company-domain
+    about: Production down? Email/phone the on-call lead first, then open a bug.
+  - name: Odoo documentation
+    url: https://www.odoo.com/documentation/
+    about: Check how standard Odoo works before requesting a change.
